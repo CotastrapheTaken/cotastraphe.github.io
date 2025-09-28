@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maze Runner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" href="/src/assets/player.png" type="image/png">
+    <style>
+      html,body {
+        margin: 0;
+        height: 100%;
+        background: #0f0f0f;
+        color: #fff;
+        font-family: 'Press Start 2P', cursive;
+        text-align: center;
+        text-transform: uppercase;
+        }
+        canvas{
+          display: block;
+          margin: auto;
+          image-rendering:pixelated;
+        }
+        #main-menu, #settings-menu {
+          padding-top: 150px;
+        }
+        .menu button {
+          display: block;
+          margin: 20px auto;
+          padding: 12px 25px;
+          font-family: 'Press Start 2P', cursive;
+          font-size: 24px;
+          text-transform: uppercase;
+          background: #333;
+          color: #fff;
+          border: 2px solid #fff;
+          cursor: pointer;
+          width: 300px;
+        }
+        .menu button:hover {
+          background: #555;
+        }
+        .setting {
+          margin: 20px auto;
+          width: 350px;
+        }
+        .setting label {
+          font-size: 28px;
+          color: #fff;
+          display: block;
+          margin-bottom: 15px;
+        }
+        #volume-slider {
+          width: 100%;
+          cursor: pointer;
+        }
+        #tutorial {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+          text-align: left;
+          font-size: 14px;
+          background: rgba(0,0,0,0.5);
+          padding: 10px;
+          border: 2px solid #fff;
+        }
+        #game-info {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          text-align: right;
+          font-size: 14px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="main-menu" class="menu">
+      <h1>MAZE RUNNER</h1>
+      <button id="play-btn">Play</button>
+      <button id="settings-btn">Settings</button>
+      <button id="exit-btn">Exit</button>
+    </div>
+    <div id="settings-menu" class="menu" style="display: none">
+      <h1>Settings</h1>
+      <button id="movement-toggle-btn">Movement: Auto-Run</button>
+      <div class="setting">
+        <label for="volume-slider">Volume</label>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+        <span id="volume-label">50%</span>
+      </div>
+      <button id="back-btn">Back</button>
+    </div>
+    <canvas id="app" style="display: none"></canvas>
+    <div id="tutorial" style="display: none">
+      <p>Movement: Arrow Keys or W A S D </p>
+      <p>Rules: Reach the end before the timer runs out!</p>
+      <p>Objective: The maze gets bigger and time shorter each level.</p>
+    </div>
+    <div id="game-info"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
