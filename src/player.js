@@ -1,4 +1,5 @@
-import { COLORS, PLAYER_SPRITE } from "./config.js";
+import { COLORS } from "./config.js";
+import PLAYER_SPRITE from "./assets/player.png";
 
 export function createPlayer(gridX, gridY, TILE) {  // players position in grid coords
   return {

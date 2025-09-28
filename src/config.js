@@ -9,8 +9,6 @@ export const INITIAL_TIME_LIMIT = 60; // seconds
 export const TIME_DECREMENT_PER_LEVEL = 5; // seconds
 export const TILE_DECREMENT_PER_LEVEL = 4;
 
-export const PLAYER_SPRITE = "/src/assets/player.png";
-
 export const COLORS = {
     floor: "#1a1a1a",
     wall: "#2f2f2f",

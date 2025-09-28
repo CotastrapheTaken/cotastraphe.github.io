@@ -9,10 +9,10 @@ function loadSfx(name, path) {
 }
 
 export function initAudio() {
-  loadSfx("tick", "/src/assets/audios/tick.wav");
-  loadSfx("move", "/src/assets/audios/move.wav");
-  loadSfx("bump", "/src/assets/audios/bump.wav");
-  loadSfx("win", "/src/assets/audios/win.wav");
+  loadSfx("tick", new URL("./assets/audios/tick.wav", import.meta.url).href);
+  loadSfx("move", new URL("./assets/audios/move.wav", import.meta.url).href);
+  loadSfx("bump", new URL("./assets/audios/bump.wav", import.meta.url).href);
+  loadSfx("win", new URL("./assets/audios/win.wav", import.meta.url).href);
 }
 
 export function playSfx(name) {
