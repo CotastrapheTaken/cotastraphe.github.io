@@ -1,4 +1,9 @@
 
+import tickSfx from './assets/audios/tick.wav';
+import moveSfx from './assets/audios/move.wav';
+import bumpSfx from './assets/audios/bump.wav';
+import winSfx from './assets/audios/win.wav';
+
 const sfx = {};
 let globalVolume = 0.4;
 
@@ -9,10 +14,10 @@ function loadSfx(name, path) {
 }
 
 export function initAudio() {
-  loadSfx("tick", new URL("./assets/audios/tick.wav", import.meta.url).href);
-  loadSfx("move", new URL("./assets/audios/move.wav", import.meta.url).href);
-  loadSfx("bump", new URL("./assets/audios/bump.wav", import.meta.url).href);
-  loadSfx("win", new URL("./assets/audios/win.wav", import.meta.url).href);
+  loadSfx("tick", tickSfx);
+  loadSfx("move", moveSfx);
+  loadSfx("bump", bumpSfx);
+  loadSfx("win", winSfx);
 }
 
 export function playSfx(name) {
