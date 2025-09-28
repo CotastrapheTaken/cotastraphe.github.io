@@ -1,3 +1,4 @@
+import seedrandom from 'seedrandom';
 import { drawHUD, banner } from "./hud.js";
 import { createMazePrim, drawMaze } from "./maze.js";
 import { createPlayer, movePlayer, drawPlayer } from "./player.js";
@@ -70,7 +71,7 @@ function init(seed, isNewLevel = false) {
   }
 
   seedStr = seed ?? Date.now().toString();
-  rng = new seedrandom(seedStr);
+  rng = seedrandom(seedStr);
 
   const GRID_W = Math.floor(CANVAS_WIDTH / TILE_SIZE);
   const GRID_H = Math.floor(CANVAS_HEIGHT / TILE_SIZE);
